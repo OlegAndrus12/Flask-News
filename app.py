@@ -1,6 +1,9 @@
-from flask import Flask, render_template, request
+import os
 import requests
-from config import NEWS_API_KEY
+
+from flask import Flask, render_template, request
+
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")  #
 
 app = Flask(__name__)
 
