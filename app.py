@@ -3,7 +3,7 @@ import requests
 
 from flask import Flask, render_template, request
 
-NEWS_API_KEY = os.environ.get('DATABASE_URL')
+NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
 
 app = Flask(__name__)
 
