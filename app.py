@@ -24,5 +24,10 @@ def index():
 
     return render_template('index.html', articles=filtered_articles, query=query)
 
+@app.route('/fireworks')
+def get_fireworks():
+    return render_template('fireworks.html')
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10000)
