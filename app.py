@@ -29,27 +29,27 @@ def get_fireworks():
     return render_template('fireworks.html')
 
 @app.route('/birthday')
-def get_fireworks():
+def get_birthday():
     return render_template('birthday.html')
 
 @app.route('/baby')
-def get_fireworks():
+def get_baby():
     return render_template('baby-wants-milk.html')
 
 @app.route('/clock')
-def get_fireworks():
+def get_clock():
     return render_template('clock.html')
 
 @app.route('/organs')
-def get_fireworks():
+def get_organs():
     return render_template('organs.html')
 
 @app.route('/wand')
-def get_fireworks():
+def get_wand():
     return render_template('magic-wand.html')
 
 @app.route('/color')
-def get_fireworks():
+def get_color():
     return render_template('random-color.html')
 
 
