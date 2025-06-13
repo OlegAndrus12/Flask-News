@@ -3,7 +3,7 @@ import requests
 
 from flask import Flask, render_template, request
 
-NEWS_API_KEY = os.getenv("NEWS_API_KEY")
+NEWS_API_KEY = os.environ.get('DATABASE_URL')
 
 app = Flask(__name__)
 
@@ -12,6 +12,7 @@ def index():
     query = request.args.get('query', 'latest')
     url = f'https://newsapi.org/v2/everything?q={query}&apiKey={NEWS_API_KEY}'
     response = requests.get(url)
+    response.raise_for_status()
     news_data = response.json()
     articles = news_data.get('articles', [])
 
